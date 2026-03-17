@@ -18,4 +18,9 @@ public class Druide {
 	public String getNom() {
 		return nom;
 	}
+	
+	public void fabriquerPotion(int quantite, int forcePotion) {
+		chaudron.remplirChaudron(quantite, forcePotion);
+		this.parler("j'ai concocté " + quantite + " doses de potion magique. Elle a une force de " + forcePotion + ". ");
+	}
 }
