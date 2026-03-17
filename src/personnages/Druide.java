@@ -23,4 +23,14 @@ public class Druide {
 		chaudron.remplirChaudron(quantite, forcePotion);
 		this.parler("j'ai concocté " + quantite + " doses de potion magique. Elle a une force de " + forcePotion + ". ");
 	}
+	
+	public void booster(Gaulois gaulois) {
+		boolean contientPotion = chaudron.resterPotion();
+		String nomGaulois = gaulois.getNom();
+		if (contientPotion == true) {
+			if (nomGaulois == "Obélix") {
+				parler("Non, " + nomGaulois + ", Non !... Et tu le sais très bien !");
+			}
+		}
+	}
 }
