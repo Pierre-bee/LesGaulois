@@ -1,5 +1,9 @@
 package personnages;
 
-public class Druide {
+import objets.Chaudron;
 
+public class Druide {
+	private String nom;
+	private int force;
+	private Chaudron chaudron;
 }
