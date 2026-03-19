@@ -7,6 +7,12 @@ public class Druide {
 	private int force;
 	private Chaudron chaudron;
 	
+	public Druide(String nom, int force, Chaudron chaudron) {
+		this.nom = nom;
+		this.force = force;
+		this.chaudron = chaudron;
+	}
+
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
