@@ -27,4 +27,9 @@ public class Village {
 		villageois[nbVillageois] =  gaulois;
 		nbVillageois++;
 	}
+	
+	public Gaulois trouverVillageois(int numVillageois) {
+		
+		return null;
+	}
 }
