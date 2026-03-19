@@ -13,20 +13,21 @@ public class TestGaulois {
 		Romain brutus = new Romain("Brutus", 14);
 		Chaudron chaudron = new Chaudron();
 		Druide panoramix = new Druide("Panoramix", 2, chaudron);
-		
+
 		asterix.parler("Bonjour " + obelix.getNom());
 		obelix.parler("Bonjour " + asterix.getNom() + ". Ca te dirais d'aller chasser des sangliers ?");
 		asterix.parler("Oui, très bonne idée");
-		
-		System.out.println("Dans la forêt, " + asterix.getNom() + " et " + obelix.getNom() + " tombent nez à nez sur le romain " + minus.getNom());
-		for (int i = 0; i < 3; i+=1) {
+
+		System.out.println("Dans la forêt, " + asterix.getNom() + " et " + obelix.getNom()
+				+ " tombent nez à nez sur le romain " + minus.getNom());
+		for (int i = 0; i < 3; i += 1) {
 			asterix.frapper(minus);
 		}
-		
+
 		panoramix.fabriquerPotion(4, 3);
 		panoramix.booster(obelix);
 		panoramix.booster(asterix);
-		for(int i = 0; i < 3; i+=1) {
+		for (int i = 0; i < 3; i += 1) {
 			asterix.frapper(brutus);
 		}
 	}
