@@ -36,6 +36,13 @@ public class Village {
 		return villageois[numVillageois-1];
 	}
 	
+	public void afficherVillageois() {
+		System.out.println("Dans le village \"" + this.nom + "\" du chef " + this.chef.getNom() +  " vivent les gaulois : ");
+		for(int i = 0; i < nbVillageois; i += 1) {
+			System.out.println("- " + villageois[i].getNom());
+		}
+	}
+	
 	public static void main(String[] args) {
 		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
 		Village village = new Village("Village des Irréductibles", "Abraracourcix", 6, 30);
@@ -46,5 +53,6 @@ public class Village {
 		System.out.println(gaulois);
 		gaulois = village.trouverVillageois(2);
 		System.out.println(gaulois);
+		village.afficherVillageois();
 	}
 }
