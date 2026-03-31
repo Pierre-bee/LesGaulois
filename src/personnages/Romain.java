@@ -27,6 +27,8 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
+		assert forceCoup > 0;
+		int force_avant_coup = force;
 		force -= forceCoup;
 		if (force < 1) {
 			force = 0;
@@ -34,6 +36,7 @@ public class Romain {
 		} else {
 			parler("Aïe");
 		}
+		assert force_avant_coup > force;
 		assert isInvariantVerified();
 	}
 	
