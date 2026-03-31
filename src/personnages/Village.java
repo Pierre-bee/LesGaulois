@@ -54,5 +54,12 @@ public class Village {
 		gaulois = village.trouverVillageois(2);
 		System.out.println(gaulois);
 		village.afficherVillageois();
+		Gaulois obelix = new Gaulois("Obélix", 25);
+		village.ajouterVillageois(obelix);
+		village.afficherVillageois();
+		Gaulois doublepolemix = new Gaulois("Douplepolémix", 4);
+		abraracourcix.sePresenter();
+		asterix.sePresenter();
+		doublepolemix.sePresenter();
 	}
 }

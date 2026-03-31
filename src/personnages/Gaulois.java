@@ -46,9 +46,9 @@ public class Gaulois {
 		} else {
 			if (village.getChef().getNom() == nom) {
 				System.out.println(
-						"Bonjour, je m'appelle " + nom + ". Je suis le chef du village nommé \"" + village + "\".");
+						"Bonjour, je m'appelle " + nom + ". Je suis le chef du village nommé \"" + village.getNom() + "\".");
 			} else {
-				System.out.println("Bonjour, je m'appelle " + nom + ". J'habite le village nommé \"" + village + "\".");
+				System.out.println("Bonjour, je m'appelle " + nom + ". J'habite le village nommé \"" + village.getNom() + "\".");
 			}
 		}
 	}
