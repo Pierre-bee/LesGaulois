@@ -41,14 +41,14 @@ public class Gaulois {
 	}
 
 	public void sePresenter() {
+		String bonjour = "Bonjour, je m'appelle ";
 		if (village == null) {
-			System.out.println("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+			System.out.println(bonjour + nom + ". Je voyage de villages en villages.");
 		} else {
-			if (village.getChef().getNom() == nom) {
-				System.out.println(
-						"Bonjour, je m'appelle " + nom + ". Je suis le chef du village nommé \"" + village.getNom() + "\".");
+			if (nom.equals(village.getChef().getNom())) {
+				System.out.println(bonjour + nom + ". Je suis le chef du village nommé \"" + village.getNom() + "\".");
 			} else {
-				System.out.println("Bonjour, je m'appelle " + nom + ". J'habite le village nommé \"" + village.getNom() + "\".");
+				System.out.println(bonjour + nom + ". J'habite le village nommé \"" + village.getNom() + "\".");
 			}
 		}
 	}
