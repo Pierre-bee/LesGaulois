@@ -8,9 +8,9 @@ public class Village {
 	private Gaulois[] villageois;
 	private Gaulois chef;
 
-	public Village(String nom, String nomChef, int forceChef, final int NB_VILLAGEOIS_MAX) {
+	public Village(String nom, Gaulois chef, final int NB_VILLAGEOIS_MAX) {
 		this.nom = nom;
-		chef = new Gaulois(nomChef, forceChef);
+		this.chef = chef;
 		chef.setVillage(this);
 		villageois = new Gaulois[NB_VILLAGEOIS_MAX];
 	}
@@ -45,7 +45,7 @@ public class Village {
 	
 	public static void main(String[] args) {
 		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
-		Village village = new Village("Village des Irréductibles", "Abraracourcix", 6, 30);
+		Village village = new Village("Village des Irréductibles", abraracourcix, 30);
 		village.trouverVillageois(30);
 		Gaulois asterix = new Gaulois("Asterix", 8);
 		village.ajouterVillageois(asterix);

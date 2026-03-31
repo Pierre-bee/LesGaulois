@@ -40,6 +40,19 @@ public class Gaulois {
 		effetPotion = forcePotion;
 	}
 
+	public void sePresenter() {
+		if (village == null) {
+			System.out.println("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
+		} else {
+			if (village.getChef().getNom() == nom) {
+				System.out.println(
+						"Bonjour, je m'appelle " + nom + ". Je suis le chef du village nommé \"" + village + "\".");
+			} else {
+				System.out.println("Bonjour, je m'appelle " + nom + ". J'habite le village nommé \"" + village + "\".");
+			}
+		}
+	}
+
 	@Override
 	public String toString() {
 		return nom + " [Gaulois, force = " + force + "]";
