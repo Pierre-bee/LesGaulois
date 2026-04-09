@@ -11,7 +11,7 @@ public class Chaudron {
 	public void remplirChaudron(int quantite, int forcePotion) {
 		quantitePotion = quantite;
 		this.forcePotion = forcePotion;
-	} 	
+	}
 
 	public int prendreLouche() {
 		if (quantitePotion < 1) {

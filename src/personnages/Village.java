@@ -1,7 +1,5 @@
 package personnages;
 
-
-
 public class Village {
 	private String nom;
 	private Gaulois[] villageois;
@@ -22,27 +20,29 @@ public class Village {
 	public Gaulois getChef() {
 		return chef;
 	}
+
 	public void ajouterVillageois(Gaulois gaulois) {
 		gaulois.setVillage(this);
-		villageois[nbVillageois] =  gaulois;
+		villageois[nbVillageois] = gaulois;
 		nbVillageois++;
 	}
-	
+
 	public Gaulois trouverVillageois(int numVillageois) {
 		if (numVillageois > nbVillageois) {
 			System.out.println("Il n'y a pas autant d'habitants dans notre village ! ");
 			return null;
 		}
-		return villageois[numVillageois-1];
+		return villageois[numVillageois - 1];
 	}
-	
+
 	public void afficherVillageois() {
-		System.out.println("Dans le village \"" + this.nom + "\" du chef " + this.chef.getNom() +  " vivent les gaulois : ");
-		for(int i = 0; i < nbVillageois; i++) {
+		System.out.println(
+				"Dans le village \"" + this.nom + "\" du chef " + this.chef.getNom() + " vivent les gaulois : ");
+		for (int i = 0; i < nbVillageois; i++) {
 			System.out.println("- " + villageois[i].getNom());
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
 		Village village = new Village("Village des Irréductibles", abraracourcix, 30);

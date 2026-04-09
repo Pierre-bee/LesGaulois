@@ -6,14 +6,14 @@ public class Romain {
 	private String nom;
 	private int force;
 	private Equipement[] equipements = new Equipement[2];
-	private int nbEquipement = 0; 
+	private int nbEquipement = 0;
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 		assert isInvariantVerified();
 	}
-	
+
 	private boolean isInvariantVerified() {
 		return force >= 0;
 	}
@@ -43,35 +43,34 @@ public class Romain {
 		assert forceAvantCoup > force;
 		assert isInvariantVerified();
 	}
-	
+
 	private void ajouterEquipement(Equipement equipement) {
 		equipements[nbEquipement] = equipement;
 		nbEquipement++;
 		System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement + ". ");
 	}
-	
+
 	public void sEquiper(Equipement equipement) {
 		String presenter = "Le soldat " + nom;
 		switch (nbEquipement) {
-		case 0 :{
+		case 0: {
 			this.ajouterEquipement(equipement);
 			break;
 		}
-		case 1 :{
-			if (equipement.equals(equipements[nbEquipement-1])) {
+		case 1: {
+			if (equipement.equals(equipements[nbEquipement - 1])) {
 				System.out.println(presenter + " possède déjà un " + equipement + ". ");
-			}
-			else {
+			} else {
 				this.ajouterEquipement(equipement);
 			}
 			break;
 		}
-		default : 
+		default:
 			System.out.println(presenter + " est déjà bien protégé ! ");
 			break;
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
 		System.out.println(minus.prendreParole());
