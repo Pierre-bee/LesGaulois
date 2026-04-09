@@ -5,7 +5,7 @@ import objets.Equipement;
 public class Romain {
 	private String nom;
 	private int force;
-	private Equipement[2] equipements;
+	private Equipement[] equipements = {null, null};
 	private int nbEquipement = 0; 
 
 	public Romain(String nom, int force) {
@@ -44,10 +44,42 @@ public class Romain {
 		assert isInvariantVerified();
 	}
 	
+	private void ajouterEquipement(Equipement equipement) {
+		equipements[nbEquipement] = equipement;
+		nbEquipement += 1;
+		System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement + ". ");
+	}
+	
+	public void sEquiper(Equipement equipement) {
+		String presenter = "Le soldat " + nom;
+		switch (nbEquipement) {
+		case 0 :{
+			this.ajouterEquipement(equipement);
+			break;
+		}
+		case 1 :{
+			if (equipement.equals(equipements[nbEquipement-1])) {
+				System.out.println(presenter + " possède déjà un " + equipement + ". ");
+			}
+			else {
+				this.ajouterEquipement(equipement);
+			}
+			break;
+		}
+		default : 
+			System.out.println(presenter + " est déjà bien protégé ! ");
+			break;
+		}
+	}
+	
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
 		System.out.println(minus.prendreParole());
-		System.out.println(Equipement.CASQUE);
-		System.out.println(Equipement.BOUCLIER);
+		//System.out.println(Equipement.CASQUE);
+		//System.out.println(Equipement.BOUCLIER);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipement.BOUCLIER);
+		minus.sEquiper(Equipement.CASQUE);
 	}
 }
