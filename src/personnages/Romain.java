@@ -5,7 +5,7 @@ import objets.Equipement;
 public class Romain {
 	private String nom;
 	private int force;
-	private Equipement[] equipements = {null, null};
+	private Equipement[] equipements = new Equipement[2];
 	private int nbEquipement = 0; 
 
 	public Romain(String nom, int force) {
@@ -32,7 +32,7 @@ public class Romain {
 
 	public void recevoirCoup(int forceCoup) {
 		assert forceCoup > 0;
-		int force_avant_coup = force;
+		int forceAvantCoup = force;
 		force -= forceCoup;
 		if (force < 1) {
 			force = 0;
@@ -40,13 +40,13 @@ public class Romain {
 		} else {
 			parler("Aïe");
 		}
-		assert force_avant_coup > force;
+		assert forceAvantCoup > force;
 		assert isInvariantVerified();
 	}
 	
 	private void ajouterEquipement(Equipement equipement) {
 		equipements[nbEquipement] = equipement;
-		nbEquipement += 1;
+		nbEquipement++;
 		System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement + ". ");
 	}
 	
@@ -75,8 +75,8 @@ public class Romain {
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
 		System.out.println(minus.prendreParole());
-		//System.out.println(Equipement.CASQUE);
-		//System.out.println(Equipement.BOUCLIER);
+		System.out.println(Equipement.CASQUE);
+		System.out.println(Equipement.BOUCLIER);
 		minus.sEquiper(Equipement.CASQUE);
 		minus.sEquiper(Equipement.CASQUE);
 		minus.sEquiper(Equipement.BOUCLIER);

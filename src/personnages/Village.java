@@ -4,8 +4,8 @@ package personnages;
 
 public class Village {
 	private String nom;
-	private int nbVillageois = 0;
 	private Gaulois[] villageois;
+	private int nbVillageois = 0;
 	private Gaulois chef;
 
 	public Village(String nom, Gaulois chef, final int NB_VILLAGEOIS_MAX) {
@@ -38,7 +38,7 @@ public class Village {
 	
 	public void afficherVillageois() {
 		System.out.println("Dans le village \"" + this.nom + "\" du chef " + this.chef.getNom() +  " vivent les gaulois : ");
-		for(int i = 0; i < nbVillageois; i += 1) {
+		for(int i = 0; i < nbVillageois; i++) {
 			System.out.println("- " + villageois[i].getNom());
 		}
 	}
