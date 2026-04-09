@@ -5,11 +5,11 @@ public class Chaudron {
 	private int forcePotion = 0;
 
 	public boolean resterPotion() {
-		return quantitePotion == 0;
+		return quantitePotion != 0;
 	}
 
 	public void remplirChaudron(int quantite, int forcePotion) {
-		quantitePotion = quantite;
+		quantitePotion += quantite;
 		this.forcePotion = forcePotion;
 	}
 

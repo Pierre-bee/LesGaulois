@@ -38,9 +38,13 @@ public class Gaulois {
 		if (effetPotion < 1) {
 			effetPotion = 1;
 		}
-		for (int i = 0; trophees != null && i < trophees.length; i++, nbTrophees++) {
+		for (int i = 0; tropheesRecuperes != null && i < tropheesRecuperes.length; i++, nbTrophees++) {
 			trophees[nbTrophees] = tropheesRecuperes[i];
 		}
+	}
+
+	public Equipement[] getTrophees() {
+		return trophees;
 	}
 
 	public void boirePotion(int forcePotion) {

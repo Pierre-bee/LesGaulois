@@ -3,6 +3,7 @@ package histoire;
 import personnages.Gaulois;
 import personnages.Romain;
 import personnages.Druide;
+import objets.Chaudron;
 import objets.Equipement;
 
 //import village_gaulois.Musee;
@@ -10,7 +11,8 @@ import objets.Equipement;
 public class Scenario {
 
 	public static void main(String[] args) {
-		Druide druide = new Druide("Panoramix", 5);
+		Chaudron chaudron = new Chaudron();
+		Druide druide = new Druide("Panoramix", 5, chaudron);
 		druide.parler("Je vais aller préparer une petite potion...");
 		druide.fabriquerPotion(5, 3);
 		Gaulois obelix = new Gaulois("Obélix", 25);
@@ -27,6 +29,7 @@ public class Scenario {
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(minus);
+			System.out.println(asterix.getTrophees());
 		} while (minus.getForce() > 0);
 		
 //		PARTIE 5 : a decommenter
