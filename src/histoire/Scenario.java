@@ -34,11 +34,6 @@ public class Scenario {
 		minus.parler("Alors " + asterix.getNom() + " on fait moins le malin face à mon équipement, Hi ! Hi !");
 		obelix.parler(asterix.getNom() + ", tu veux un peu d'aide ?");
 		obelix.frapper(minus);
-//		do {
-//			asterix.frapper(minus);
-//		} while (minus.getForce() > 0);
-//		System.out.println(asterix.getTrophees());
-// 	PARTIE 5 : a decommenter
 		milexcus.parler("UN GAU... UN GAUGAU...");
 		do {
 			obelix.frapper(milexcus);
