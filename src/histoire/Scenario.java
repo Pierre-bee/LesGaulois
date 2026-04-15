@@ -6,7 +6,7 @@ import personnages.Druide;
 import objets.Chaudron;
 import objets.Equipement;
 
-//import village_gaulois.Musee;
+import personnages.Musee;
 
 public class Scenario {
 
@@ -38,14 +38,17 @@ public class Scenario {
 //			asterix.frapper(minus);
 //		} while (minus.getForce() > 0);
 //		System.out.println(asterix.getTrophees());
-//		PARTIE 5 : a decommenter
-//		milexcus.parler("UN GAU... UN GAUGAU...");
-//		do {
-//			obelix.frapper(milexcus);
-//		} while (milexcus.getForce() > 0);
+// 	PARTIE 5 : a decommenter
+		milexcus.parler("UN GAU... UN GAUGAU...");
+		do {
+			obelix.frapper(milexcus);
+		} while (milexcus.getForce() > 0);
 
-//		Musee musee = new Musee();
-//		obelix.faireUneDonnation(musee);
+		Musee musee = new Musee();
+		obelix.faireUneDonnation(musee);
+		
+		String instructionsOCaml = musee.extraireInstructionsOCaml();
+		System.out.println(instructionsOCaml);
 
 	}
 

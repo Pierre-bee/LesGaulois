@@ -63,6 +63,20 @@ public class Gaulois {
 			}
 		}
 	}
+	
+	public void faireUneDonnation(Musee musee) {
+		if(nbTrophees != 0) {
+			String texteDon = "Je donne au musée tous mes trophées : ";
+			StringBuilder texteAjouts = new StringBuilder();
+			for(int i = 0; i < nbTrophees; i++) {
+				musee.donnerTrophees(this, trophees[i]);
+				texteAjouts.append("\n- ");
+				texteAjouts.append(trophees[i]);
+			}
+			texteDon += texteAjouts.toString();
+			this.parler(texteDon);
+		}
+	}
 
 
 	public static void main(String[] args) {
